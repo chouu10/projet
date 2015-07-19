@@ -1,0 +1,70 @@
+img.displayed {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+
+img.displayed:hover {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 430px;
+    height: 390px;
+}
+
+#aWrapper {
+    opacity: 0.9;
+}
+#vWrapper{
+    opacity: 0.9;
+}
+
+#imgW{
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+
+
+#imgWS{
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+
+#imgA{
+    cursor: pointer;
+}
+
+#imgA:hover{
+    opacity: 0.9;
+}
+
+.aList{
+    white-space: nowrap;
+    margin: 0px;
+}
+.aList li {
+    display: inline;
+    padding-left: 2px;
+    padding-right: 2px;
+    list-style-type: none;
+    cursor: pointer;
+
+}
+.aList li:hover{
+    opacity: 0.8;
+}
+
+.vList{
+    white-space: nowrap;
+    margin: 0px;
+}
+.vList li {
+    padding-left: 2px;
+    padding-right: 2px;
+    list-style-type: none;
+}
+

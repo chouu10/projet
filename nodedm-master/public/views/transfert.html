@@ -1,0 +1,60 @@
+<div class="panel-body">
+    <div ng-controller="TransfertCtrl">
+        <div class="center-form panel">
+            <div class="radio" >
+                <label>
+                    <input type="radio" name="optionsRadios1" id="banktrans" ng-name="MethodeTransfert" value="banktrans"
+                           ng-model="MethodeTransfert" checked>
+                    Transfert bancaire
+                    <input class="form-control" id="numBank" type="text" name="numBank" ng-model="numBank" placeholder="Numero du compte bancaire"
+                           required>
+
+                </label>
+            </div>
+            <div class="radio">
+                <label>
+                    <input type="radio" name="optionsRadios1" id="association" ng-name="MethodeTransfert" value="association"
+                           ng-model="MethodeTransfert">
+                    Transfert vers une association
+                </label>
+            </div>
+
+
+            <li class="list-group-item"> <div class="form-group select">
+                <label for="MethodeTransfert" class="col-sm-3"> </label><div class="col-sm-9"><select  id="MethodeTransfert" name="MethodeTransfert" ng-model="MethodeTransfert">
+                <option value="association1" ng-model="MethodeTransfert">Croissant rouge</option>
+                <option value="association2" ng-model="MethodeTransfert">Unicef</option>
+                <option value="association3" ng-model="MethodeTransfert">Medecins sans frontière</option>
+                </select></div></p><p class="hide" data-cref="67" data-ctype="=" data-cvalue="1">
+            </div></li>
+
+<br>
+
+            <div class="radio">
+                <label>
+                    <input type="radio" name="optionsRadios1" id="bonAchat" ng-name="MethodeTransfert" value="bonAchat"
+                           ng-model="MethodeTransfert">
+
+                    Echange avec un bon d'achat
+
+                </label>
+            </div>
+
+
+            <li class="list-group-item"> <div class="form-group select">
+                <label for="MethodeTransfert" class="col-sm-3">Sélectionnez une valeur </label><div class="col-sm-9"><select  id="" name="MethodeTransfert" ng-model="MethodeTransfert">
+                <option value="bon1" ng-model="job">bon type 1</option>
+                <option value="bon2" ng-model="job">bon type 2</option>
+                <option value="bon3" ng-model="job">bon type 3</option>
+            </select></div></p><p class="hide" data-cref="67" data-ctype="=" data-cvalue="1">
+            </div></li>
+            </li>
+
+
+<br><br>
+
+            <li class="list-group-item"> <input class="btn btn-lg btn-block btn-primary" type="submit" ng-click="transfert()"
+                                                value="Enregistrer" ng-disabled="infoForm.$invalid" schema="UserSchema"/></li>
+</div>
+    </div>
+</div>

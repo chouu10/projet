@@ -1,0 +1,80 @@
+<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,400italic' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="../stylesheets/ngDialog.css">
+<link rel="stylesheet" href="../stylesheets/ngDialog-theme-default.css">
+<link rel="stylesheet" href="../stylesheets/ngDialog-theme-plain.css">
+<link rel="stylesheet" href="../stylesheets/ngDialog-custom-width.css">
+<div class="container">
+
+    <div class="panel-body">
+        <div ng-controller="ProfileCtrl">
+
+            <a href="" ng-click="open2()">Open via service</a>
+
+            <script type="text/ng-template" id="firstDialogId">
+
+                <div class="ngdialog-message">
+                    <div class="">
+                        <h1>   <p class="navbar-text" ng-bind="currentUser.question1"></p></h1>
+                    </div>
+                    <div class="radio">
+                        <label>    <input type="radio" name="optionsRadios" id="0" ng-name= "categorieRep" value="oui" ng-model="categorieRep" checked>
+                            oui
+                        </label>
+                    </div>
+                    <div class="radio">
+
+                        <label>    <input type="radio" name="optionsRadios" id="1" ng-name= "categorieRep" value="non" ng-model="categorieRep" checked>
+                            non
+                        </label>
+                    </div>
+                    <button type="button" class="ngdialog-button ngdialog-button-primary" ng-click=confirm("OK")>OK</button>
+                </div>
+            </script>
+
+
+            <h3>Videos</h3>
+            <br>
+            <div id="vWrapper">
+                <div class="row">
+                    <div class="col-md-4" ng-repeat="video in videos">
+                        <img id="imgW" src="images/bg.png" width="380" height="280" ng-click="openVideo(video.url)"/>
+                        <youtube-video video-url="video.url" player-width="widthVideo" player-height="heightVideo" player-vars="playerVars"></youtube-video>
+                    </div>
+                </div>
+            </div>
+
+            <br>
+            <br>
+
+            <h3>Images</h3>
+            <br>
+            <div id="aWrapper">
+                <div class="row">
+                    <div class="col-md-4" ng-repeat="annonce in ann track by $index">
+                        <img id="imgA" ng-src="{{annonce.url}}" width="{{ widthImage }}" height="{{ heightImage }}"
+                             ng-click="open(annonce)"/>
+                    </div>
+                </div>
+            </div>
+
+            <script type="text/ng-template" id="firstDialog">
+                <a href="{{lien}}"  target="_blank"  ng-click="donateImage(pub)">
+                    <img ng-src="{{ pub }}" width="{{ widthDialogImage }}" height="{{ heightDialogImage }}"/>
+                </a>
+                <div class="ngdialog-buttons mt">
+                    <button type="button" class="ngdialog-button ngdialog-button-primary">Ok</button>
+                </div>
+            </script>
+
+            <script type="text/ng-template" id="secondDialog">
+                <img id="imgWS" src="images/bg.png" width="1170" height="550" ng-click="player.playVideo()"/>
+                <youtube-video video-url="pubVideo" player-width="widthDialogVideo" player-height="heightDialogVideo"
+                         player="player" player-vars="playerVars" ng-click="donate()"></youtube-video>
+                <div class="ngdialog-buttons mt">
+                    <button type="button" class="ngdialog-button ngdialog-button-primary">Ok</button>
+                </div>
+            </script>
+
+        </div>
+    </div>
+</div>
